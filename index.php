@@ -1,56 +1,16 @@
 <?php
 
-Class A {
-    public function solve($a,$b){
-        if($a==0){
-            return NULL;
-        }
-            return $this->X=-($b/$a);
-        
-		
-        protected $X;
-    }
+use Khoteev\KhoteevException;
+use Khoteev\MyLog;
 
-Class B extends A {
-	
-	protected function dis ($a, $b, $c){
-		$x=($b**2)-4*$a*$c;
-		return $x;
-	}
-	
-    public function qu_solve($a,$b,$c) {
-        
-        $x=$this->dis($a,$b,$c);
-        
-        if($a==0){
-            
-            return $this->solve($b,$c);
-        }
-		
-        
-        if($x>-0){
-            return $this->X=array(
-            -($b+sqrt($b**2-4*$a*$c)/2*$a),
-            -($b-sqrt($b**2-4*$a*$c)/2*$a)
-            );
-        }
-        
-        if($x==0){
-            return $this->X=array(-($b/2*$a));
-        }
-        
-        return $this->X=NULL;
-		
-    }
-	
-}
+include "core/EquationInterface.php";
+include "core/LogAbstract.php";
+include "core/LogInterface.php";
+include "Khoteev/MyLog.php";
+include "Khoteev/Equation.php";
+include "Khoteev/QuEquation.php";
+include "Khoteev/KhoteevException.php";
 
-
-$a = new A();
-$b = new B();+
-$a->solve(1,2);
-$b->qu_solve(0,2,1);
-
-
-var_dump($a,$b,$x);
+ini_set("display_errors", 1);
+error_reporting(-1);
 ?>
