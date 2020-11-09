@@ -1,28 +1,56 @@
 <?php
-Class A{}
 
-Class B extends A{
-	protected $a;
-	public function __construct($a){
-		$this->a=$a;
+Class A {
+    public function solve($a,$b){
+        if($a==0){
+            return NULL;
+        }
+            return $this->X=-($b/$a);
+        
+		
+        protected $X;
+    }
+
+Class B extends A {
+	
+	protected function dis ($a, $b, $c){
+		$x=($b**2)-4*$a*$c;
+		return $x;
 	}
+	
+    public function qu_solve($a,$b,$c) {
+        
+        $x=$this->dis($a,$b,$c);
+        
+        if($a==0){
+            
+            return $this->solve($b,$c);
+        }
+		
+        
+        if($x>-0){
+            return $this->X=array(
+            -($b+sqrt($b**2-4*$a*$c)/2*$a),
+            -($b-sqrt($b**2-4*$a*$c)/2*$a)
+            );
+        }
+        
+        if($x==0){
+            return $this->X=array(-($b/2*$a));
+        }
+        
+        return $this->X=NULL;
+		
+    }
+	
 }
 
-Class C extends B {
-	protected $b;
-	public function __construct($a,$b){
-		$this->b=$b;
-		parent::__construct($a);
-	}
-}
+
+$a = new A();
+$b = new B();+
+$a->solve(1,2);
+$b->qu_solve(0,2,1);
 
 
-$a1=new A();
-$a2=new A();
-$a3=new A();
-$b4=new B($a3);
-$c5=new C($b4,$a3,$a1);
-
-var_dump($c5);
+var_dump($a,$b,$x);
 ?>
-
