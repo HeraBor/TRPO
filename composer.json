@@ -1,0 +1,25 @@
+{
+  "name": "herabor/trpo",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Semen Khoteev",
+      "email": "cema.khoteev@mail.ru"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/rok9ru/trpo-core.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/HeraBor/khoteev.git"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "rok9ru/trpo-core":"^2.0",
+    "herabor/khoteev":"^1.0"
+  }
+}
